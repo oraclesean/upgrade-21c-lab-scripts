@@ -23,7 +23,6 @@ upg.timezone_upg=yes
 
 EOF
 
-
   if [ -d "$ORACLE_19C_HOME" ]
 then cat << EOF >> $ORADATA/autoupgrade/config.txt
 # Database parameters - 19c upgrade
@@ -45,7 +44,7 @@ then cat << EOF >> $ORADATA/autoupgrade/config.txt
 upg.target_home=$ORACLE_21C_HOME
 upg.target_cdb=${ORACLE_SID}CDB
 upg.target_pdb_name=${ORACLE_SID}PDB
-upg.target_version=21
+upg.target_version=21.5
 upg.target_pdb_copy_option=file_name_convert=NONE
 EOF
 else echo "An upgrade home is not present"
