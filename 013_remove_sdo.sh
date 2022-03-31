@@ -26,7 +26,4 @@ drop user spatial_wfs_admin_usr cascade;
 EOF
 
 # Reference: https://mikedietrichde.com/2017/08/01/oracle-multimedia-ordim-clean-oracle-database-11-2-12-2
-sqlplus / as sysdba << EOF
-REM Requires user input:
-@${ORACLE_HOME}/rdbms/admin/catcmprm.sql ORDIM
-EOF
+echo Y | sqlplus / as sysdba @${ORACLE_HOME}/rdbms/admin/catcmprm.sql ORDIM

@@ -25,8 +25,10 @@ alter system set sga_target=1002438656 scope=spfile;
 alter system set processes=300 scope=spfile;
 alter system reset local_listener;
 
-REM Avoid failure during autoupgrade time zone upgrade:
-alter system set parallel_max_servers=32 scope=both;
+REM Avoid UPG-1316 error during autoupgrade time zone upgrade
+REM (ERROR Dispatcher failed: AutoUpgException [UPG-1316]):
+alter system set parallel_max_servers=16 scope=both;
+
 
 REM Add larger logfile groups:
 alter database add logfile group 11 size 200m;

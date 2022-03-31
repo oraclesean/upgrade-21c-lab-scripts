@@ -20,14 +20,25 @@ upg.sid=$ORACLE_SID
 upg.start_time=now
 upg.run_utlrp=yes
 upg.timezone_upg=yes
+
 EOF
+
 
   if [ -d "$ORACLE_19C_HOME" ]
 then cat << EOF >> $ORADATA/autoupgrade/config.txt
 # Database parameters - 19c upgrade
 upg.target_home=$ORACLE_19C_HOME
 upg.target_version=19
+
+# Update parameters after upgrade
+upg.add_after_upgrade_pfile=$ORADATA/autoupgrade/init${ORACLE_SID}.add.ora
 EOF
+
+cat << EOF > $ORADATA/autoupgrade/init${ORACLE_SID}.add.ora
+sga_target=600m
+sga_max_size=600m
+EOF
+
 elif [ -d "$ORACLE_21C_HOME" ]
 then cat << EOF >> $ORADATA/autoupgrade/config.txt
 # Database parameters - 21c upgrade
