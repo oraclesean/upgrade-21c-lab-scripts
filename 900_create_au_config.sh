@@ -1,6 +1,7 @@
 # Create an autoupgrade configuration file based on version
 
 mkdir -p $ORADATA/autoupgrade
+rm -fr $ORADATA/autoupgrade/*
 
   if [ -f "$ORADATA/autoupgrade/config.txt" ]
 then mv $ORADATA/autoupgrade/config.txt $ORADATA/autoupgrade/config.txt.$(date '+%Y%m%d%H%M')
