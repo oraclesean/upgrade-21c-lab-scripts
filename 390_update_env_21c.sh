@@ -11,7 +11,7 @@ rm $ORADATA/dbconfig/${ORACLE_SID}CDB/*LAB*
 . oraenv <<< ${ORACLE_SID}CDB
 
 # Copy database files from the ORACLE_BASE_HOME/dbs to the config directory:
-$SCRIPTS_DIR/copy_configurations.sh
+$SCRIPT_DIR/copy_configurations.sh
 
 # Update the listener.ora to reflect the new home:
 sed -i 's/19c/21c/g' $ORADATA/dbconfig/$ORACLE_SID/listener.ora
