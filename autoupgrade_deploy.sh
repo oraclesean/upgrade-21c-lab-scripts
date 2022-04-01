@@ -8,4 +8,4 @@ echo " "
 echo "Starting autoupgrade in 10 seconds..."
 sleep 10
 
-$SCRIPT_DIR/910_run_autoupgrade.sh deploy
+$SCRIPT_DIR/autoupgrade_run.sh deploy

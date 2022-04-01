@@ -10,5 +10,5 @@
 /scripts/018_remove_em.sh
 /scripts/100_gather_stats.sh
 /scripts/110_start_archivelog.sh
-/scripts/900_create_au_config.sh
-/scripts/901_autoupgrade_analyze.sh
+/scripts/autoupgrade_create_config.sh
+/scripts/autoupgrade_analyze.sh

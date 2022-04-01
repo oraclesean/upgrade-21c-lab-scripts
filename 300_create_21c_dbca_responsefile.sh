@@ -14,7 +14,7 @@ emExpressPort=5500
 dbsnmpPassword=oracle
 characterSet=AL32UTF8
 nationalCharacterSet=AL16UTF16
-initParams=db_create_file_dest=$ORADATA,db_create_online_log_dest_1=$ORADATA,db_recovery_file_dest=$ORADATA/fast_recovery_area,audit_trail=none,audit_sys_operations=false,parallel_max_servers=16,sga_max_size=2004877312,sga_target=2004877312
+initParams=db_create_file_dest=$ORADATA,db_create_online_log_dest_1=$ORADATA,db_recovery_file_dest=$ORADATA/fast_recovery_area,audit_trail=none,audit_sys_operations=false,parallel_max_servers=16,sga_max_size=2004877312,sga_target=1002438656
 automaticMemoryManagement=FALSE
 totalMemory=2048
 EOF
