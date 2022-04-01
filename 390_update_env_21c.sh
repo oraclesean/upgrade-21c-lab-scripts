@@ -1,6 +1,9 @@
 # Steps to add the 21c database to the Docker-specific configuration directory.
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+# Copy the updated oratab to the config directory for the original SID:
+cp /etc/oratab $ORADATA/dbconfig/$ORACLE_SID/
+
 # Copy the existing pre-19c config directory to the new SID:
 cp -rp $ORADATA/dbconfig/$ORACLE_SID $ORADATA/dbconfig/${ORACLE_SID}CDB/
 
