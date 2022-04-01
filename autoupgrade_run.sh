@@ -9,7 +9,7 @@ __sqlpath=$SQLPATH
 unset ORACLE_PATH
 unset SQLPATH
 
-$TARGET_HOME/jdk/bin/java -jar $TARGET_HOME/rdbms/admin/autoupgrade.jar -config $ORADATA/autoupgrade/config.txt -mode $1
+$TARGET_HOME/jdk/bin/java -jar $ORADATA/autoupgrade.jar -config $ORADATA/autoupgrade/config.txt -mode $1
 
 export ORACLE_PATH=$__oracle_path
 export SQLPATH=$__sqlpath
