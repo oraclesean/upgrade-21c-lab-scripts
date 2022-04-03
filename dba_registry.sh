@@ -1,4 +1,4 @@
-  if [ "$($ORACLE_HOME/bin/sqlplus -V | grep Release | sed -E 's/^.*Release ([0-9]{2})\..*$/\1/')" -gt 11 ]
+  if [ "$($ORACLE_HOME/bin/sqlplus -V | grep Release | sed -E 's/^.*Release ([0-9]{2})\..*$/\1/')" -gt 12 ]
 then __version=", version_full"
 else __version=""
 fi
