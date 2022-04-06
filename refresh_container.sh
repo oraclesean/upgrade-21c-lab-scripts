@@ -26,4 +26,5 @@ docker rm -f $CONTAINER_NAME 2>/dev/null
 docker run -d --name $CONTAINER_NAME -e ORACLE_SID=$SID -e PDB_COUNT=0 \
            -v /oradata/$CONTAINER_NAME:/opt/oracle/oradata \
            -v /oradata/scripts:/scripts \
+           -p 11521:1521 -p 8080:8080 \
            phx.ocir.io/ax1cxmhdo0fd/oracle/db:${TAG}
