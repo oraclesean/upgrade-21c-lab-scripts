@@ -1,3 +1,6 @@
+export VERSION=$(ls /oradata/backups/1)
+export CONTAINER_NAME=LAB
+
   if [ -z $CONTAINER_NAME ] || [ -z $STEP ] || [ -z $VERSION ]
 then echo "The following variables must be set:"
      echo "  CONTAINER_NAME: $CONTAINER_NAME"
